@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Способи доставки</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1 class="title">Способи доставки</h1>
+</header>
+
+<nav class="menu">
+    <button onclick="showBlock('nova')">Нова Пошта</button>
+    <button onclick="showBlock('ukr')">Укрпошта</button>
+    <button onclick="showBlock('pickup')">Самовивіз</button>
+</nav>
+
+<main>
+
+    <!-- НОВА ПОШТА -->
+    <section id="nova" class="delivery-block active">
+        <h2>Нова Пошта</h2>
+        <p>
+            Доставка Новою Поштою займає від 1 до 2 днів.  
+            Ви можете отримати замовлення у відділенні або замовити кур'єрську доставку.
+        </p>
+        <ul>
+            <li>Термін доставки: 1–2 дні</li>
+            <li>Можливість кур'єрської доставки</li>
+            <li>Відстеження посилки онлайн</li>
+            <li>Вартість залежить від ваги та габаритів</li>
+        </ul>
+        <div class="info-box">
+            <strong>Адреси відділень:</strong>
+            <p>Перегляньте на сайті Нової Пошти.</p>
+        </div>
+    </section>
+
+    <!-- УКРПОШТА -->
+    <section id="ukr" class="delivery-block">
+        <h2>Укрпошта</h2>
+        <p>
+            Укрпошта — найдешевший спосіб доставки по Україні.  
+            Підходить для невеликих відправлень.
+        </p>
+        <ul>
+            <li>Термін доставки: 3–5 днів</li>
+            <li>Низька вартість пересилки</li>
+            <li>Доставка у всі населені пункти</li>
+            <li>Можливість міжнародної доставки</li>
+        </ul>
+        <div class="info-box">
+            <strong>Графік роботи:</strong>
+            <p>Пн–Пт: 9:00–18:00 • Сб: 9:00–14:00</p>
+        </div>
+    </section>
+
+    <!-- САМОВИВІЗ -->
+    <section id="pickup" class="delivery-block">
+        <h2>Самовивіз</h2>
+        <p>
+            Ви можете забрати замовлення самостійно з нашого складу.  
+            Попередньо узгодьте час прибуття.
+        </p>
+        <ul>
+            <li>Безкоштовно</li>
+            <li>Зручно та швидко</li>
+            <li>Можливість перевірити товар на місці</li>
+        </ul>
+        <div class="info-box">
+            <strong>Адреса складу:</strong>
+            <p>м. Київ, вул. Прикладна 12</p>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2025 Сервіс доставки. Всі права захищені.</p>
+</footer>
+
+<script>
+function showBlock(id) {
+    document.querySelectorAll('.delivery-block')
+        .forEach(block => block.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
